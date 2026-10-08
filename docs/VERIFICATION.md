@@ -1,6 +1,6 @@
-# Local verification
+# Verification
 
-These results describe the local Shiftfolio copy. Remote CI on the exact publication commit and the independent final tree/history review remain pending.
+These results describe the verified Shiftfolio release. Local checks, independent privacy review, and exact-commit GitHub CI passed; evidence is recorded below.
 
 ## Automated checks
 
@@ -16,8 +16,12 @@ Native Chrome was used against the local demo on port 3210. The schedule rejecte
 
 The desktop schedule and payroll screens were captured in [calendar.png](images/calendar.png) and [payroll.png](images/payroll.png). A 400-pixel-wide view was inspected; the calendar used horizontal scrolling. This was a narrow-screen visual check, not a full mobile device matrix.
 
-The local root returned HTTP 200 and `/login` returned HTTP 404. The route boundary and Content Security Policy were inspected. Further direct-route and network checks are part of the final publication review.
+The local root returned HTTP 200 and `/login` returned HTTP 404. The route boundary and Content Security Policy were inspected. The final direct-route and network checks are recorded below.
 
 ## Final isolation observation
 
 Chrome Network inspection after a reload and Schedule/Payroll/Team navigation showed 11 local application resources and two browser-extension resources; no external application service requests appeared. Console warnings observed were from installed browser extensions. Direct local HTTP checks returned 200 for `/` and 404 for `/login`, `/calendar`, `/admin/scheduler`, `/admin/payroll/hosts`, `/api/headshot/example`, `/reference/app`, and `/api/auth/callback`.
+
+## Published release
+
+The initial release commit `888a0a6ffda502c669f2f8aca936d85ea116faa9` matched GitHub exactly and passed [all CI steps](https://github.com/alexmunzon/shiftfolio/actions/runs/37787110127), including clean dependency installation, privacy scan, lint, the test suite, isolated PostgreSQL integration, and production build. Independent review confirmed fresh history with no employer commits. The browser also confirmed `/calendar` displays Not found. The final CSV download was parsed as six records, six actual CRLF separators, and total projected pay of $3,276.00.

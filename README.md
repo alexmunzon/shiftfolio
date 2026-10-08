@@ -1,5 +1,7 @@
 # Shiftfolio
 
+[![CI](https://github.com/alexmunzon/shiftfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/alexmunzon/shiftfolio/actions/workflows/ci.yml)
+
 Shiftfolio is an interactive, offline portfolio demonstration of a staff scheduling workflow. It uses fictional people, studio channels, shifts, and pay rates. The demo runs locally without an account, database, or API keys.
 
 Alex built scheduling and payroll features in the original application that staff use. His boss approved publishing a portfolio version. This repository presents an adapted demo and retained reference code; it does not claim Alex was the sole author of the original application.

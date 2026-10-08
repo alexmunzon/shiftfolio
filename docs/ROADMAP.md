@@ -10,8 +10,15 @@ This roadmap tracks the portfolio demo, separate from the original production ap
 - Original application routes kept as reference material outside the active route tree.
 - Local unit and synthetic harness checks, lint, build, and browser walkthrough recorded in the verification notes.
 
-## Remaining release checks
+## Release completed — October 8, 2026
 
-1. Complete direct-route and network inspection for the final publication tree. The local root route and login route have been checked; other archived URLs still need the final sweep.
-2. Review the final publication tree and full Git history for credentials, personal data, and internal identifiers. Keep the publication history separate from the original application's history.
-3. If publishing to a remote repository, verify that its commit matches the reviewed local commit and that CI, including the isolated PostgreSQL job, ran on that exact commit. Record any remaining limitations.
+The synthetic portfolio is published at [alexmunzon/shiftfolio](https://github.com/alexmunzon/shiftfolio). All release gates passed for the initial reviewed release commit `888a0a6ffda502c669f2f8aca936d85ea116faa9`: local tests, lint, build, browser workflows, independent tree/history privacy review, remote commit match, and [GitHub CI including isolated PostgreSQL integration](https://github.com/alexmunzon/shiftfolio/actions/runs/37787110127).
+
+The completion endpoint is a public, reproducible, synthetic-only repository with screenshots, documentation, and green CI. No deployment or live employer service change is included.
+
+## Future maintenance
+
+- Keep privacy, tests, lint, PostgreSQL checks and build passing on every change.
+- Review new fixtures and screenshots before committing them.
+- Keep reference routes disconnected from the running demo.
+- Any expansion to the complete authenticated product or production deployment is a separate project.
